@@ -1,0 +1,50 @@
+<div class="md:hidden">
+  <div class="flex justify-around items-center pt-5 relative z-50">
+    <button mat-button class="">
+      <img src="assets/LOGO.svg" alt="">
+    </button>
+    <div class="relative -space-x-3">
+      <button mat-button>
+        <mat-icon fontIcon="search">search</mat-icon>
+      </button>
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon fontIcon="home">menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" class="absolute first-letter:capitalize bg-gray-200 w-56 right-0 top-2">
+        <button mat-menu-item>
+          <span>sell</span>
+        </button>
+        <button mat-menu-item>
+          <span>marketplace</span>
+        </button>
+        <button mat-menu-item>
+          <span>community</span>
+        </button>
+        <button mat-menu-item>
+          <span>develop</span>
+        </button>
+        <button mat-menu-item>
+          <span>resources</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>  
+</div>
+
+<div class="hidden md:flex justify-between items-center px-10 pt-5">
+  <div class="flex justify-around items-center first-letter:capitalize">
+    <button mat-button class="">
+      <img src="assets/LOGO.svg" alt="">
+    </button>
+    <div class="flex items-center">
+      <button mat-button class="" *ngFor="let item of items">{{item}}</button>
+    </div>
+  </div>
+  <div class="flex space-x-3 items-center first-letter:capitalize">
+    <button mat-button>log in</button>
+    <button mat-button class="text-white bg-purple-400">get started</button>
+    <button mat-button>
+      <mat-icon fontIcon="search">search</mat-icon>
+    </button>
+  </div>
+</div>
